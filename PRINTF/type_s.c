@@ -33,7 +33,7 @@ void		type_s(t_flags *str_spec, va_list v1)
 		str_spec->num += ft_putchar_len(' ', str_spec->width);
 	}
 	if (str_spec->minus || str_spec->width < 0) // !str_spec->tochnost -> точности нет 
-	{ 
+	{ // 1 условие ужасное для (-8s и len = 12)
 		if (!str_spec->width || (str_spec->minus && !str_spec->width * (-1)) || 
 		(str_spec->width < 0 && (str_spec->width * (-1)) < ft_strlen(s)) ||
 		(str_spec->minus && str_spec->width < 0 && (str_spec->width * (-1)) < ft_strlen(s)) ||
