@@ -64,7 +64,8 @@ int			ft_printf(const char *str, ...)
 	{
 		while_print(str_spec, v1);
 	}
+	num = str_spec->num;
 	free(str_spec);
 	va_end(v1);
-	return (str_spec->num);
+	return (num);
 }
